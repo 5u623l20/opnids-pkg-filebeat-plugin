@@ -1,0 +1,55 @@
+<model>
+  <mount>//OPNsense/Filebeat</mount>
+  <version>1.0.0</version>
+  <description>Filebeat plugin</description>
+  <items>
+    <enabled type="BooleanField">
+      <default>0</default>
+      <Required>Y</Required>
+    </enabled>
+    <output type="OptionField">
+      <Required>Y</Required>
+      <default>logstash</default>
+      <OptionValues>
+        <logstash>Logstash</logstash>
+      </OptionValues>
+    </output>
+    <inputs>
+      <log>
+        <enabled type="OptionField">
+          <Required>Y</Required>
+          <default>true</default>
+          <OptionValues>
+            <true>True</true>
+            <false>False</false>
+          </OptionValues>
+        </enabled>
+        <paths type="TextField">
+          <default>/var/log/suricata/eve.json</default>
+        </paths>
+      </log>
+    </inputs>
+    <outputs>
+      <logstash>
+        <hosts type="TextField">
+          <default>localhost:5044</default>
+        </hosts>
+        <ssl>
+          <enabled type="BooleanField">
+            <Required>Y</Required>
+            <default>0</default>
+          </enabled>
+          <ca type="TextField">
+            <default></default>
+          </ca>
+          <client type="TextField">
+            <default></default>
+          </client>
+          <key type="TextField">
+            <default></default>
+          </key>
+        </ssl>
+      </logstash>
+    </outputs>
+  </items>
+</model>

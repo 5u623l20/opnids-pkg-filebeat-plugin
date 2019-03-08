@@ -1,0 +1,3 @@
+#!/bin/sh
+
+sed -i '' 's/NO/YES/g' /usr/local/etc/rc.d/filebeat

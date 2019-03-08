@@ -1,0 +1,78 @@
+<form>
+  <field>
+    <label>General</label>
+    <type>header</type>
+  </field>
+  <field>
+    <id>filebeat.enabled</id>
+    <label>Enabled</label>
+    <type>checkbox</type>
+    <help>Enable Filebeat.</help>
+  </field>
+  <field>
+    <id>filebeat.output</id>
+    <label>Output Method</label>
+    <type>dropdown</type>
+    <help>Select the output method you would like to use for exporting logs</help>
+  </field>
+  <field>
+    <label>Log Input</label>
+    <type>header</type>
+  </field>
+  <field>
+    <id>filebeat.inputs.log.enabled</id>
+    <label>Enabled</label>
+    <type>dropdown</type>
+    <help>Toggle log inputs</help>
+  </field>
+  <field>
+    <id>filebeat.inputs.log.paths</id>
+    <label>Path(s)</label>
+    <type>textbox</type>
+    <help>
+      <![CDATA[Log paths - line-break delimited list of hosts to connect to. No spaces permitted, only line-breaks. Paths that should be crawled and fetched. Glob based paths.]]>
+    </help>
+  </field>
+  <field>
+    <label>Logstash Output</label>
+    <type>header</type>
+  </field>
+  <field>
+    <id>filebeat.outputs.logstash.hosts</id>
+    <label>Host(s)</label>
+    <type>textbox</type>
+    <help>
+      <![CDATA[Logstash hosts - line-break delimited list of hosts to connect to. No spaces permitted, only line-breaks.]]>
+    </help>
+  </field>
+  <field>
+    <id>filebeat.outputs.logstash.ssl.enabled</id>
+    <label>Enabled SSL</label>
+    <type>checkbox</type>
+    <help>Enable SSL configuration</help>
+  </field>
+  <field>
+    <id>filebeat.outputs.logstash.ssl.ca</id>
+    <label>Certificate Authority</label>
+    <type>text</type>
+    <help>
+      <![CDATA[Path to root certificates for HTTPS server verification]]>
+    </help>
+  </field>
+  <field>
+    <id>filebeat.outputs.logstash.ssl.client</id>
+    <label>Client Certificate</label>
+    <type>text</type>
+    <help>
+      <![CDATA[Path to certificate for SSL client authentication]]>
+    </help>
+  </field>
+  <field>
+    <id>filebeat.outputs.logstash.ssl.key</id>
+    <label>Client Key</label>
+    <type>text</type>
+    <help>
+      <![CDATA[Path to client Certificate Key]]>
+    </help>
+  </field>
+</form>
