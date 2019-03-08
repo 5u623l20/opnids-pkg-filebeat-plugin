@@ -1,0 +1,3 @@
+{% if helpers.exists('OPNsense.Filebeat') and OPNsense.Filebeat.enabled|default('0') == '1' %}
+filebeat_enable="YES"
+{% endif %}
